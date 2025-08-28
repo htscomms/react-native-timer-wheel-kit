@@ -2,7 +2,6 @@
 # Node / TypeScript (library)
 # ─────────────────────────────────────────────
 node_modules/
-dist/
 build/
 lib/
 .eslintcache
