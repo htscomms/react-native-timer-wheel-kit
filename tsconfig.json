@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "ESNext",
+    "jsx": "react-native",
+    "strict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "resolveJsonModule": true
+  },
+  "include": ["src"]
+}

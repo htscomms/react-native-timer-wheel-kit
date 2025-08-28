@@ -1,0 +1,25 @@
+{
+  "name": "react-native-timer-wheel-kit",
+  "version": "0.1.0",
+  "description": "TimerWheelKit for React Native (no CocoaPods, pure-JS UI)",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "src", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format=cjs,esm --splitting --clean",
+    "dev": "tsup src/index.ts --dts --format=cjs --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.72.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.65",
+    "@types/react-native": "^0.73.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0"
+  }
+}
