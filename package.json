@@ -1,29 +1,43 @@
 {
   "name": "react-native-timer-wheel-kit",
   "version": "0.1.0",
-  "description": "TimerWheelKit for React Native (no CocoaPods, pure-JS UI)",
+  "description": "Pure-JS port of TimerWheelKit for React Native (iOS/Android, no CocoaPods).",
   "license": "MIT",
-  "sideEffects": false,
+  "author": "Luke Pettit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<your-username>/react-native-timer-wheel-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<your-username>/react-native-timer-wheel-kit/issues"
+  },
+  "homepage": "https://github.com/<your-username>/react-native-timer-wheel-kit#readme",
 
+ 
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "react-native": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "src", "README.md", "LICENSE"],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
+      "react-native": "./dist/index.js",
       "import": "./dist/index.mjs",
-      "default": "./dist/index.js"
+      "require": "./dist/index.js",
+      "default": "./dist/index.mjs"
     }
   },
 
+  "sideEffects": false,
+  "files": ["dist", "src", "README.md", "LICENSE"],
+
+
   "scripts": {
-    "build": "tsup src/index.ts --dts --format=cjs,esm --splitting --clean",
+    "clean": "rm -rf dist",
+    "build": "tsup src/index.ts --dts --format=cjs,esm --sourcemap --clean",
     "dev": "tsup src/index.ts --dts --format=cjs --watch",
-    "prepublishOnly": "npm run build",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
   },
 
   "peerDependencies": {
@@ -31,13 +45,14 @@
     "react-native": ">=0.72.0"
   },
 
-  "dependencies": {
-    "typescript": "^5.5.0",
-    "tsup": "^8.0.0"
-  },
-
   "devDependencies": {
     "@types/react": "^18.2.65",
-    "@types/react-native": "^0.73.0"
+    "@types/react-native": "^0.73.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0"
+  },
+
+  "engines": {
+    "node": ">=16"
   }
 }
