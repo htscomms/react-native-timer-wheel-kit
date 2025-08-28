@@ -6,22 +6,21 @@
   "author": "Luke Pettit",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<your-username>/react-native-timer-wheel-kit.git"
+    "url": "git+https://github.com/htscomms/react-native-timer-wheel-kit.git"
   },
   "bugs": {
-    "url": "https://github.com/<your-username>/react-native-timer-wheel-kit/issues"
+    "url": "https://github.com/htscomms/react-native-timer-wheel-kit/issues"
   },
-  "homepage": "https://github.com/<your-username>/react-native-timer-wheel-kit#readme",
+  "homepage": "https://github.com/htscomms/react-native-timer-wheel-kit#readme",
 
- 
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "react-native": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "react-native": "src/index.ts",
+  "types": "src/index.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "react-native": "./dist/index.js",
+      "types": "./src/index.ts",
+      "react-native": "./src/index.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js",
       "default": "./dist/index.mjs"
@@ -30,7 +29,6 @@
 
   "sideEffects": false,
   "files": ["dist", "src", "README.md", "LICENSE"],
-
 
   "scripts": {
     "clean": "rm -rf dist",
@@ -53,6 +51,6 @@
   },
 
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   }
 }
